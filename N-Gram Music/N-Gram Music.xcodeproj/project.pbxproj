@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF0A49411C1673D900D2699D /* junk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF0A493F1C1673D900D2699D /* junk.cpp */; };
+		AF275D4B1C06381600A423AB /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF275D491C06381600A423AB /* audio.cpp */; };
+		AF275D4E1C06386300A423AB /* note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF275D4C1C06386300A423AB /* note.cpp */; };
+		AF275D511C06386D00A423AB /* song.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF275D4F1C06386D00A423AB /* song.cpp */; };
+		AF275D541C063D4B00A423AB /* noteLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF275D521C063D4B00A423AB /* noteLibrary.cpp */; };
+		AF400C9C1BFFD3F30089D2E2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF400C9B1BFFD3F30089D2E2 /* main.cpp */; };
+		AF7BB7AC1C0E730E0051285B /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AA1C0E730E0051285B /* libfftw3.a */; };
+		AF7BB7AD1C0E730E0051285B /* libfftw3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */; };
+		AF7BB7B01C0E73330051285B /* libSoundTouch.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AE1C0E73330051285B /* libSoundTouch.1.dylib */; };
+		AF7BB7B11C0E73330051285B /* libSoundTouch.la in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AF1C0E73330051285B /* libSoundTouch.la */; };
+		AF7BB7B41C0E745E0051285B /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7B21C0E745E0051285B /* libsndfile.a */; };
+		AF7BB7B51C0E745E0051285B /* libsndfile.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */; };
+		AFAEC98F1C0B87FC00FD702A /* testNote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC98D1C0B87FC00FD702A /* testNote.cpp */; };
+		AFAEC9941C0BFBAC00FD702A /* plotting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC9921C0BFBAC00FD702A /* plotting.cpp */; };
+		AFAEC9F11C0CF31A00FD702A /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC9AB1C0CF31A00FD702A /* Makefile */; };
+		AFAEC9F21C0CF31A00FD702A /* detectionfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC9B41C0CF31A00FD702A /* detectionfunctions.cpp */; };
+		AFAEC9F41C0CF31A00FD702A /* mq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC9B91C0CF31A00FD702A /* mq.cpp */; };
+		AFAEC9F61C0CF31A00FD702A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AFAEC9D71C0CF31A00FD702A /* README.md */; };
+		AFFCEB381C0D368700FC56BB /* exceptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFFCEB361C0D368700FC56BB /* exceptions.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF400C961BFFD3F30089D2E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AF0A49331C165ABA00D2699D /* 01 - O Tannenbaum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01 - O Tannenbaum.wav"; sourceTree = "<group>"; };
+		AF0A49341C165ABA00D2699D /* 02 - What Child Is This.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "02 - What Child Is This.wav"; sourceTree = "<group>"; };
+		AF0A49351C165ABA00D2699D /* 03 - My Little Drum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "03 - My Little Drum.wav"; sourceTree = "<group>"; };
+		AF0A49361C165ABA00D2699D /* 04 - Linus and Lucy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "04 - Linus and Lucy.wav"; sourceTree = "<group>"; };
+		AF0A49371C165ABA00D2699D /* 05 - Christmas Time Is Here (instrumental).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "05 - Christmas Time Is Here (instrumental).wav"; sourceTree = "<group>"; };
+		AF0A49381C165ABA00D2699D /* 06 - Christmas Time Is Here (vocal).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "06 - Christmas Time Is Here (vocal).wav"; sourceTree = "<group>"; };
+		AF0A49391C165ABA00D2699D /* 07 - Skating.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "07 - Skating.wav"; sourceTree = "<group>"; };
+		AF0A493A1C165ABA00D2699D /* 08 - Hark, the Herald Angels Sing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "08 - Hark, the Herald Angels Sing.wav"; sourceTree = "<group>"; };
+		AF0A493B1C165ABA00D2699D /* 09 - Christmas Is Coming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "09 - Christmas Is Coming.wav"; sourceTree = "<group>"; };
+		AF0A493C1C165ABA00D2699D /* 10 - FÃ¼r Elise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "10 - FÃ¼r Elise.wav"; sourceTree = "<group>"; };
+		AF0A493D1C165ABA00D2699D /* 11 - The Christmas Song.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "11 - The Christmas Song.wav"; sourceTree = "<group>"; };
+		AF0A493E1C165ABA00D2699D /* 12 - Greensleeves.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "12 - Greensleeves.wav"; sourceTree = "<group>"; };
+		AF0A493F1C1673D900D2699D /* junk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = junk.cpp; sourceTree = "<group>"; };
+		AF0A49401C1673D900D2699D /* junk.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = junk.hpp; sourceTree = "<group>"; };
+		AF275D491C06381600A423AB /* audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio.cpp; sourceTree = "<group>"; };
+		AF275D4A1C06381600A423AB /* audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = audio.hpp; sourceTree = "<group>"; };
+		AF275D4C1C06386300A423AB /* note.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = note.cpp; sourceTree = "<group>"; };
+		AF275D4D1C06386300A423AB /* note.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = note.hpp; sourceTree = "<group>"; };
+		AF275D4F1C06386D00A423AB /* song.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = song.cpp; sourceTree = "<group>"; };
+		AF275D501C06386D00A423AB /* song.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = song.hpp; sourceTree = "<group>"; };
+		AF275D521C063D4B00A423AB /* noteLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = noteLibrary.cpp; sourceTree = "<group>"; };
+		AF275D531C063D4B00A423AB /* noteLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = noteLibrary.hpp; sourceTree = "<group>"; };
+		AF400C981BFFD3F30089D2E2 /* N-Gram Music */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "N-Gram Music"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF400C9B1BFFD3F30089D2E2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AF7BB7AA1C0E730E0051285B /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.a; sourceTree = "<group>"; };
+		AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfftw3.3.dylib; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.3.dylib; sourceTree = "<group>"; };
+		AF7BB7AE1C0E73330051285B /* libSoundTouch.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSoundTouch.1.dylib; path = ../../../../../../usr/local/lib/libSoundTouch.1.dylib; sourceTree = "<group>"; };
+		AF7BB7AF1C0E73330051285B /* libSoundTouch.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libSoundTouch.la; path = ../../../../../../usr/local/lib/libSoundTouch.la; sourceTree = "<group>"; };
+		AF7BB7B21C0E745E0051285B /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = ../../../../../../usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.a; sourceTree = "<group>"; };
+		AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsndfile.1.dylib; path = ../../../../../../usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.1.dylib; sourceTree = "<group>"; };
+		AFAEC98D1C0B87FC00FD702A /* testNote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = testNote.cpp; path = test/testNote.cpp; sourceTree = "<group>"; };
+		AFAEC98E1C0B87FC00FD702A /* testNote.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = testNote.hpp; path = test/testNote.hpp; sourceTree = "<group>"; };
+		AFAEC9921C0BFBAC00FD702A /* plotting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plotting.cpp; path = test/plotting.cpp; sourceTree = SOURCE_ROOT; };
+		AFAEC9931C0BFBAC00FD702A /* plotting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = plotting.hpp; path = test/plotting.hpp; sourceTree = SOURCE_ROOT; };
+		AFAEC99B1C0CF31A00FD702A /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		AFAEC99F1C0CF31A00FD702A /* layout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = layout.html; sourceTree = "<group>"; };
+		AFAEC9A01C0CF31A00FD702A /* relations.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = relations.html; sourceTree = "<group>"; };
+		AFAEC9A21C0CF31A00FD702A /* flasky.css_t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flasky.css_t; sourceTree = "<group>"; };
+		AFAEC9A31C0CF31A00FD702A /* small_flask.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = small_flask.css; sourceTree = "<group>"; };
+		AFAEC9A41C0CF31A00FD702A /* theme.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = theme.conf; sourceTree = "<group>"; };
+		AFAEC9A51C0CF31A00FD702A /* flask_theme_support.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = flask_theme_support.py; sourceTree = "<group>"; };
+		AFAEC9A61C0CF31A00FD702A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AFAEC9A71C0CF31A00FD702A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		AFAEC9A81C0CF31A00FD702A /* conf.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = conf.py; sourceTree = "<group>"; };
+		AFAEC9A91C0CF31A00FD702A /* index.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.rst; sourceTree = "<group>"; };
+		AFAEC9AA1C0CF31A00FD702A /* installation.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = installation.rst; sourceTree = "<group>"; };
+		AFAEC9AB1C0CF31A00FD702A /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		AFAEC9AC1C0CF31A00FD702A /* use.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = use.rst; sourceTree = "<group>"; };
+		AFAEC9AD1C0CF31A00FD702A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AFAEC9B41C0CF31A00FD702A /* detectionfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detectionfunctions.cpp; sourceTree = "<group>"; };
+		AFAEC9B51C0CF31A00FD702A /* detectionfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detectionfunctions.h; sourceTree = "<group>"; };
+		AFAEC9B91C0CF31A00FD702A /* mq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mq.cpp; sourceTree = "<group>"; };
+		AFAEC9BA1C0CF31A00FD702A /* mq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mq.h; sourceTree = "<group>"; };
+		AFAEC9D71C0CF31A00FD702A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AFC936901C013AB6005A4342 /* audio */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = audio; path = "N-Gram Music/audio"; sourceTree = "<group>"; };
+		AFC936921C01541E005A4342 /* 01 - Glenn Gould - Aria.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01 - Glenn Gould - Aria.wav"; sourceTree = "<group>"; };
+		AFC936931C01541E005A4342 /* 02 - Glenn Gould - Variation 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "02 - Glenn Gould - Variation 1.wav"; sourceTree = "<group>"; };
+		AFC936941C01541E005A4342 /* 03 - Glenn Gould - Variation 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "03 - Glenn Gould - Variation 2.wav"; sourceTree = "<group>"; };
+		AFC936951C01541E005A4342 /* 04 - Glenn Gould - Variation 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "04 - Glenn Gould - Variation 3.wav"; sourceTree = "<group>"; };
+		AFC936961C01541E005A4342 /* 05 - Glenn Gould - Variation 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "05 - Glenn Gould - Variation 4.wav"; sourceTree = "<group>"; };
+		AFC936971C01541E005A4342 /* 06 - Glenn Gould - Variation 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "06 - Glenn Gould - Variation 5.wav"; sourceTree = "<group>"; };
+		AFC936981C01541E005A4342 /* 07 - Glenn Gould - Variation 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "07 - Glenn Gould - Variation 6.wav"; sourceTree = "<group>"; };
+		AFC936991C01541E005A4342 /* 08 - Glenn Gould - Variation 7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "08 - Glenn Gould - Variation 7.wav"; sourceTree = "<group>"; };
+		AFC9369A1C01541E005A4342 /* 09 - Glenn Gould - Variation 8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "09 - Glenn Gould - Variation 8.wav"; sourceTree = "<group>"; };
+		AFC9369B1C01541E005A4342 /* 10 - Glenn Gould - Variation 9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "10 - Glenn Gould - Variation 9.wav"; sourceTree = "<group>"; };
+		AFC9369C1C01541E005A4342 /* 11 - Glenn Gould - Variation 10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "11 - Glenn Gould - Variation 10.wav"; sourceTree = "<group>"; };
+		AFC9369D1C01541E005A4342 /* 12 - Glenn Gould - Variation 11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "12 - Glenn Gould - Variation 11.wav"; sourceTree = "<group>"; };
+		AFC9369E1C01541E005A4342 /* 13 - Glenn Gould - Variation 12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "13 - Glenn Gould - Variation 12.wav"; sourceTree = "<group>"; };
+		AFC9369F1C01541E005A4342 /* 14 - Glenn Gould - Variation 13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "14 - Glenn Gould - Variation 13.wav"; sourceTree = "<group>"; };
+		AFC936A01C01541E005A4342 /* 15 - Glenn Gould - Variation 14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "15 - Glenn Gould - Variation 14.wav"; sourceTree = "<group>"; };
+		AFC936A11C01541E005A4342 /* 16 - Glenn Gould - Variation 15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "16 - Glenn Gould - Variation 15.wav"; sourceTree = "<group>"; };
+		AFC936A21C01541E005A4342 /* 17 - Glenn Gould - Variation 16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "17 - Glenn Gould - Variation 16.wav"; sourceTree = "<group>"; };
+		AFC936A31C01541E005A4342 /* 18 - Glenn Gould - Variation 17.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "18 - Glenn Gould - Variation 17.wav"; sourceTree = "<group>"; };
+		AFC936A41C01541E005A4342 /* 19 - Glenn Gould - Variation 18.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "19 - Glenn Gould - Variation 18.wav"; sourceTree = "<group>"; };
+		AFC936A51C01541E005A4342 /* 20 - Glenn Gould - Variation 19.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "20 - Glenn Gould - Variation 19.wav"; sourceTree = "<group>"; };
+		AFC936A61C01541E005A4342 /* 21 - Glenn Gould - Variation 20.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "21 - Glenn Gould - Variation 20.wav"; sourceTree = "<group>"; };
+		AFC936A71C01541E005A4342 /* 22 - Glenn Gould - Variation 21.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "22 - Glenn Gould - Variation 21.wav"; sourceTree = "<group>"; };
+		AFC936A81C01541E005A4342 /* 23 - Glenn Gould - Variation 22.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "23 - Glenn Gould - Variation 22.wav"; sourceTree = "<group>"; };
+		AFC936A91C01541E005A4342 /* 24 - Glenn Gould - Variation 23.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "24 - Glenn Gould - Variation 23.wav"; sourceTree = "<group>"; };
+		AFC936AA1C01541E005A4342 /* 25 - Glenn Gould - Variation 24.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "25 - Glenn Gould - Variation 24.wav"; sourceTree = "<group>"; };
+		AFC936AB1C01541E005A4342 /* 26 - Glenn Gould - Variation 25.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "26 - Glenn Gould - Variation 25.wav"; sourceTree = "<group>"; };
+		AFC936AC1C01541E005A4342 /* 27 - Glenn Gould - Variation 26.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "27 - Glenn Gould - Variation 26.wav"; sourceTree = "<group>"; };
+		AFC936AD1C01541E005A4342 /* 28 - Glenn Gould - Variation 27.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "28 - Glenn Gould - Variation 27.wav"; sourceTree = "<group>"; };
+		AFC936AE1C01541E005A4342 /* 29 - Glenn Gould - Variation 28.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "29 - Glenn Gould - Variation 28.wav"; sourceTree = "<group>"; };
+		AFC936AF1C01541E005A4342 /* 30 - Glenn Gould - Variation 29.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "30 - Glenn Gould - Variation 29.wav"; sourceTree = "<group>"; };
+		AFC936B01C01541E005A4342 /* 31 - Glenn Gould - Variation 30.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "31 - Glenn Gould - Variation 30.wav"; sourceTree = "<group>"; };
+		AFC936B11C01541E005A4342 /* 32 - Glenn Gould - Aria (Reprise).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "32 - Glenn Gould - Aria (Reprise).wav"; sourceTree = "<group>"; };
+		AFE816081C02AC02001FD6C3 /* transients */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = transients; path = "N-Gram Music/transients"; sourceTree = "<group>"; };
+		AFFCEB351C0D2A3C00FC56BB /* onsets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = onsets; path = "N-Gram Music/onsets"; sourceTree = "<group>"; };
+		AFFCEB361C0D368700FC56BB /* exceptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exceptions.cpp; sourceTree = "<group>"; };
+		AFFCEB371C0D368700FC56BB /* exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exceptions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF400C951BFFD3F30089D2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7BB7B41C0E745E0051285B /* libsndfile.a in Frameworks */,
+				AF7BB7B51C0E745E0051285B /* libsndfile.1.dylib in Frameworks */,
+				AF7BB7B01C0E73330051285B /* libSoundTouch.1.dylib in Frameworks */,
+				AF7BB7B11C0E73330051285B /* libSoundTouch.la in Frameworks */,
+				AF7BB7AC1C0E730E0051285B /* libfftw3.a in Frameworks */,
+				AF7BB7AD1C0E730E0051285B /* libfftw3.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF0A49321C165ABA00D2699D /* A Charlie Brown Christmas */ = {
+			isa = PBXGroup;
+			children = (
+				AF0A49331C165ABA00D2699D /* 01 - O Tannenbaum.wav */,
+				AF0A49341C165ABA00D2699D /* 02 - What Child Is This.wav */,
+				AF0A49351C165ABA00D2699D /* 03 - My Little Drum.wav */,
+				AF0A49361C165ABA00D2699D /* 04 - Linus and Lucy.wav */,
+				AF0A49371C165ABA00D2699D /* 05 - Christmas Time Is Here (instrumental).wav */,
+				AF0A49381C165ABA00D2699D /* 06 - Christmas Time Is Here (vocal).wav */,
+				AF0A49391C165ABA00D2699D /* 07 - Skating.wav */,
+				AF0A493A1C165ABA00D2699D /* 08 - Hark, the Herald Angels Sing.wav */,
+				AF0A493B1C165ABA00D2699D /* 09 - Christmas Is Coming.wav */,
+				AF0A493C1C165ABA00D2699D /* 10 - FÃ¼r Elise.wav */,
+				AF0A493D1C165ABA00D2699D /* 11 - The Christmas Song.wav */,
+				AF0A493E1C165ABA00D2699D /* 12 - Greensleeves.wav */,
+			);
+			path = "A Charlie Brown Christmas";
+			sourceTree = "<group>";
+		};
+		AF400C8F1BFFD3F30089D2E2 = {
+			isa = PBXGroup;
+			children = (
+				AF0A49321C165ABA00D2699D /* A Charlie Brown Christmas */,
+				AF7BB7B21C0E745E0051285B /* libsndfile.a */,
+				AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */,
+				AF7BB7AE1C0E73330051285B /* libSoundTouch.1.dylib */,
+				AF7BB7AF1C0E73330051285B /* libSoundTouch.la */,
+				AF7BB7AA1C0E730E0051285B /* libfftw3.a */,
+				AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */,
+				AFC936911C01541E005A4342 /* Goldberg Variations */,
+				AFAEC98C1C0B87D400FD702A /* Test */,
+				AF400C9A1BFFD3F30089D2E2 /* N-Gram Music */,
+				AFAEC9951C0CF31A00FD702A /* modal-master */,
+				AF400C991BFFD3F30089D2E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF400C991BFFD3F30089D2E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF400C981BFFD3F30089D2E2 /* N-Gram Music */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF400C9A1BFFD3F30089D2E2 /* N-Gram Music */ = {
+			isa = PBXGroup;
+			children = (
+				AF400C9B1BFFD3F30089D2E2 /* main.cpp */,
+				AF275D491C06381600A423AB /* audio.cpp */,
+				AF275D4A1C06381600A423AB /* audio.hpp */,
+				AF275D4C1C06386300A423AB /* note.cpp */,
+				AF275D521C063D4B00A423AB /* noteLibrary.cpp */,
+				AF275D531C063D4B00A423AB /* noteLibrary.hpp */,
+				AF275D4D1C06386300A423AB /* note.hpp */,
+				AF275D4F1C06386D00A423AB /* song.cpp */,
+				AF275D501C06386D00A423AB /* song.hpp */,
+				AF0A493F1C1673D900D2699D /* junk.cpp */,
+				AF0A49401C1673D900D2699D /* junk.hpp */,
+			);
+			path = "N-Gram Music";
+			sourceTree = "<group>";
+		};
+		AFAEC98C1C0B87D400FD702A /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC98D1C0B87FC00FD702A /* testNote.cpp */,
+				AFAEC98E1C0B87FC00FD702A /* testNote.hpp */,
+				AFAEC9921C0BFBAC00FD702A /* plotting.cpp */,
+				AFAEC9931C0BFBAC00FD702A /* plotting.hpp */,
+				AFC936901C013AB6005A4342 /* audio */,
+				AFE816081C02AC02001FD6C3 /* transients */,
+				AFFCEB351C0D2A3C00FC56BB /* onsets */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		AFAEC9951C0CF31A00FD702A /* modal-master */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC99B1C0CF31A00FD702A /* CMakeLists.txt */,
+				AFAEC99C1C0CF31A00FD702A /* docs */,
+				AFAEC9AD1C0CF31A00FD702A /* LICENSE */,
+				AFAEC9AE1C0CF31A00FD702A /* modal */,
+				AFAEC9D71C0CF31A00FD702A /* README.md */,
+			);
+			path = "modal-master";
+			sourceTree = "<group>";
+		};
+		AFAEC99C1C0CF31A00FD702A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC99D1C0CF31A00FD702A /* _themes */,
+				AFAEC9A81C0CF31A00FD702A /* conf.py */,
+				AFAEC9A91C0CF31A00FD702A /* index.rst */,
+				AFAEC9AA1C0CF31A00FD702A /* installation.rst */,
+				AFAEC9AB1C0CF31A00FD702A /* Makefile */,
+				AFAEC9AC1C0CF31A00FD702A /* use.rst */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		AFAEC99D1C0CF31A00FD702A /* _themes */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC99E1C0CF31A00FD702A /* flask */,
+				AFAEC9A51C0CF31A00FD702A /* flask_theme_support.py */,
+				AFAEC9A61C0CF31A00FD702A /* LICENSE */,
+				AFAEC9A71C0CF31A00FD702A /* README */,
+			);
+			path = _themes;
+			sourceTree = "<group>";
+		};
+		AFAEC99E1C0CF31A00FD702A /* flask */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC99F1C0CF31A00FD702A /* layout.html */,
+				AFAEC9A01C0CF31A00FD702A /* relations.html */,
+				AFAEC9A11C0CF31A00FD702A /* static */,
+				AFAEC9A41C0CF31A00FD702A /* theme.conf */,
+			);
+			path = flask;
+			sourceTree = "<group>";
+		};
+		AFAEC9A11C0CF31A00FD702A /* static */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC9A21C0CF31A00FD702A /* flasky.css_t */,
+				AFAEC9A31C0CF31A00FD702A /* small_flask.css */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		AFAEC9AE1C0CF31A00FD702A /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEC9B21C0CF31A00FD702A /* detectionfunctions */,
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		AFAEC9B21C0CF31A00FD702A /* detectionfunctions */ = {
+			isa = PBXGroup;
+			children = (
+				AFFCEB361C0D368700FC56BB /* exceptions.cpp */,
+				AFFCEB371C0D368700FC56BB /* exceptions.h */,
+				AFAEC9B41C0CF31A00FD702A /* detectionfunctions.cpp */,
+				AFAEC9B51C0CF31A00FD702A /* detectionfunctions.h */,
+				AFAEC9B91C0CF31A00FD702A /* mq.cpp */,
+				AFAEC9BA1C0CF31A00FD702A /* mq.h */,
+			);
+			path = detectionfunctions;
+			sourceTree = "<group>";
+		};
+		AFC936911C01541E005A4342 /* Goldberg Variations */ = {
+			isa = PBXGroup;
+			children = (
+				AFC936921C01541E005A4342 /* 01 - Glenn Gould - Aria.wav */,
+				AFC936931C01541E005A4342 /* 02 - Glenn Gould - Variation 1.wav */,
+				AFC936941C01541E005A4342 /* 03 - Glenn Gould - Variation 2.wav */,
+				AFC936951C01541E005A4342 /* 04 - Glenn Gould - Variation 3.wav */,
+				AFC936961C01541E005A4342 /* 05 - Glenn Gould - Variation 4.wav */,
+				AFC936971C01541E005A4342 /* 06 - Glenn Gould - Variation 5.wav */,
+				AFC936981C01541E005A4342 /* 07 - Glenn Gould - Variation 6.wav */,
+				AFC936991C01541E005A4342 /* 08 - Glenn Gould - Variation 7.wav */,
+				AFC9369A1C01541E005A4342 /* 09 - Glenn Gould - Variation 8.wav */,
+				AFC9369B1C01541E005A4342 /* 10 - Glenn Gould - Variation 9.wav */,
+				AFC9369C1C01541E005A4342 /* 11 - Glenn Gould - Variation 10.wav */,
+				AFC9369D1C01541E005A4342 /* 12 - Glenn Gould - Variation 11.wav */,
+				AFC9369E1C01541E005A4342 /* 13 - Glenn Gould - Variation 12.wav */,
+				AFC9369F1C01541E005A4342 /* 14 - Glenn Gould - Variation 13.wav */,
+				AFC936A01C01541E005A4342 /* 15 - Glenn Gould - Variation 14.wav */,
+				AFC936A11C01541E005A4342 /* 16 - Glenn Gould - Variation 15.wav */,
+				AFC936A21C01541E005A4342 /* 17 - Glenn Gould - Variation 16.wav */,
+				AFC936A31C01541E005A4342 /* 18 - Glenn Gould - Variation 17.wav */,
+				AFC936A41C01541E005A4342 /* 19 - Glenn Gould - Variation 18.wav */,
+				AFC936A51C01541E005A4342 /* 20 - Glenn Gould - Variation 19.wav */,
+				AFC936A61C01541E005A4342 /* 21 - Glenn Gould - Variation 20.wav */,
+				AFC936A71C01541E005A4342 /* 22 - Glenn Gould - Variation 21.wav */,
+				AFC936A81C01541E005A4342 /* 23 - Glenn Gould - Variation 22.wav */,
+				AFC936A91C01541E005A4342 /* 24 - Glenn Gould - Variation 23.wav */,
+				AFC936AA1C01541E005A4342 /* 25 - Glenn Gould - Variation 24.wav */,
+				AFC936AB1C01541E005A4342 /* 26 - Glenn Gould - Variation 25.wav */,
+				AFC936AC1C01541E005A4342 /* 27 - Glenn Gould - Variation 26.wav */,
+				AFC936AD1C01541E005A4342 /* 28 - Glenn Gould - Variation 27.wav */,
+				AFC936AE1C01541E005A4342 /* 29 - Glenn Gould - Variation 28.wav */,
+				AFC936AF1C01541E005A4342 /* 30 - Glenn Gould - Variation 29.wav */,
+				AFC936B01C01541E005A4342 /* 31 - Glenn Gould - Variation 30.wav */,
+				AFC936B11C01541E005A4342 /* 32 - Glenn Gould - Aria (Reprise).wav */,
+			);
+			name = "Goldberg Variations";
+			path = "Glenn Gould - Bach J.S. - Goldberg Variations";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF400C971BFFD3F30089D2E2 /* N-Gram Music */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */;
+			buildPhases = (
+				AF400C941BFFD3F30089D2E2 /* Sources */,
+				AF400C951BFFD3F30089D2E2 /* Frameworks */,
+				AF400C961BFFD3F30089D2E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "N-Gram Music";
+			productName = "N-Gram Music";
+			productReference = AF400C981BFFD3F30089D2E2 /* N-Gram Music */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF400C901BFFD3F30089D2E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = 6.S083;
+				TargetAttributes = {
+					AF400C971BFFD3F30089D2E2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "N-Gram Music" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AF400C8F1BFFD3F30089D2E2;
+			productRefGroup = AF400C991BFFD3F30089D2E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF400C971BFFD3F30089D2E2 /* N-Gram Music */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF400C941BFFD3F30089D2E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAEC9F11C0CF31A00FD702A /* Makefile in Sources */,
+				AFAEC9F21C0CF31A00FD702A /* detectionfunctions.cpp in Sources */,
+				AF400C9C1BFFD3F30089D2E2 /* main.cpp in Sources */,
+				AF0A49411C1673D900D2699D /* junk.cpp in Sources */,
+				AF275D541C063D4B00A423AB /* noteLibrary.cpp in Sources */,
+				AF275D4B1C06381600A423AB /* audio.cpp in Sources */,
+				AFAEC98F1C0B87FC00FD702A /* testNote.cpp in Sources */,
+				AF275D511C06386D00A423AB /* song.cpp in Sources */,
+				AFAEC9F61C0CF31A00FD702A /* README.md in Sources */,
+				AFAEC9F41C0CF31A00FD702A /* mq.cpp in Sources */,
+				AFAEC9941C0BFBAC00FD702A /* plotting.cpp in Sources */,
+				AF275D4E1C06386300A423AB /* note.cpp in Sources */,
+				AFFCEB381C0D368700FC56BB /* exceptions.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF400C9D1BFFD3F30089D2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AF400C9E1BFFD3F30089D2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AF400CA01BFFD3F30089D2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/usr/local/include/,
+					/usr/local/include/soundtouch/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsndfile/1.0.25/lib",
+					"$(PROJECT_DIR)/fftw/3.3.4_1/lib",
+					"$(PROJECT_DIR)/fftw/3.3.4_1/libsndfile/1.0.25/lib",
+					"$(PROJECT_DIR)/soundtouch",
+					2/source/SoundTouch/.libs,
+					"$(PROJECT_DIR)/SoundTouch",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-L/usr/local/lib",
+					"-lfftw3",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF400CA11BFFD3F30089D2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/usr/local/include/,
+					/usr/local/include/soundtouch/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsndfile/1.0.25/lib",
+					"$(PROJECT_DIR)/fftw/3.3.4_1/lib",
+					"$(PROJECT_DIR)/fftw/3.3.4_1/libsndfile/1.0.25/lib",
+					"$(PROJECT_DIR)/soundtouch",
+					2/source/SoundTouch/.libs,
+					"$(PROJECT_DIR)/SoundTouch",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-L/usr/local/lib",
+					"-lfftw3",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "N-Gram Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF400C9D1BFFD3F30089D2E2 /* Debug */,
+				AF400C9E1BFFD3F30089D2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF400CA01BFFD3F30089D2E2 /* Debug */,
+				AF400CA11BFFD3F30089D2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF400C901BFFD3F30089D2E2 /* Project object */;
+}
