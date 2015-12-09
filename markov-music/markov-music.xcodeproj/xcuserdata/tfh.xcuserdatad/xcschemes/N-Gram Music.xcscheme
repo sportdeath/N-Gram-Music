@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-               BuildableName = "N-Gram Music"
+               BuildableName = "markov-music"
                BlueprintName = "N-Gram Music"
-               ReferencedContainer = "container:N-Gram Music.xcodeproj">
+               ReferencedContainer = "container:markov-music.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "N-Gram Music"
+            BuildableName = "markov-music"
             BlueprintName = "N-Gram Music"
-            ReferencedContainer = "container:N-Gram Music.xcodeproj">
+            ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,11 +56,21 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "N-Gram Music"
+            BuildableName = "markov-music"
             BlueprintName = "N-Gram Music"
-            ReferencedContainer = "container:N-Gram Music.xcodeproj">
+            ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/testSamples/Glenn Gould - J.S. Bach - Well-Tempered Clavier/CD1/02 - Fugue No. 1 in C Major (BWV 846).wav&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/outputs/debug.wav&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -75,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "N-Gram Music"
+            BuildableName = "markov-music"
             BlueprintName = "N-Gram Music"
-            ReferencedContainer = "container:N-Gram Music.xcodeproj">
+            ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

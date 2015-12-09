@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF2B970F1C17FF1C002891C4 /* detectionfunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF2B97081C17FF1C002891C4 /* detectionfunctions.cpp */; };
+		AF2B97101C17FF1C002891C4 /* exceptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF2B970A1C17FF1C002891C4 /* exceptions.cpp */; };
+		AF2B97111C17FF1C002891C4 /* mq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF2B970D1C17FF1C002891C4 /* mq.cpp */; };
+		AF3A5BBA1C17C7DE000BEC27 /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF3A5BB11C17C7DE000BEC27 /* audio.cpp */; };
+		AF3A5BBB1C17C7DE000BEC27 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF3A5BB31C17C7DE000BEC27 /* main.cpp */; };
+		AF3A5BBC1C17C7DE000BEC27 /* note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF3A5BB41C17C7DE000BEC27 /* note.cpp */; };
+		AF3A5BBD1C17C7DE000BEC27 /* noteLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF3A5BB61C17C7DE000BEC27 /* noteLibrary.cpp */; };
+		AF3A5BBE1C17C7DE000BEC27 /* song.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF3A5BB81C17C7DE000BEC27 /* song.cpp */; };
+		AF7BB7AC1C0E730E0051285B /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AA1C0E730E0051285B /* libfftw3.a */; };
+		AF7BB7AD1C0E730E0051285B /* libfftw3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */; };
+		AF7BB7B41C0E745E0051285B /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7B21C0E745E0051285B /* libsndfile.a */; };
+		AF7BB7B51C0E745E0051285B /* libsndfile.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF400C961BFFD3F30089D2E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AF2B97081C17FF1C002891C4 /* detectionfunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detectionfunctions.cpp; path = "modal-detectionFunctions/detectionfunctions.cpp"; sourceTree = SOURCE_ROOT; };
+		AF2B97091C17FF1C002891C4 /* detectionfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detectionfunctions.h; path = "modal-detectionFunctions/detectionfunctions.h"; sourceTree = SOURCE_ROOT; };
+		AF2B970A1C17FF1C002891C4 /* exceptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = exceptions.cpp; path = "modal-detectionFunctions/exceptions.cpp"; sourceTree = SOURCE_ROOT; };
+		AF2B970B1C17FF1C002891C4 /* exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = exceptions.h; path = "modal-detectionFunctions/exceptions.h"; sourceTree = SOURCE_ROOT; };
+		AF2B970C1C17FF1C002891C4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "modal-detectionFunctions/LICENSE"; sourceTree = SOURCE_ROOT; };
+		AF2B970D1C17FF1C002891C4 /* mq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mq.cpp; path = "modal-detectionFunctions/mq.cpp"; sourceTree = SOURCE_ROOT; };
+		AF2B970E1C17FF1C002891C4 /* mq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mq.h; path = "modal-detectionFunctions/mq.h"; sourceTree = SOURCE_ROOT; };
+		AF3A5BB11C17C7DE000BEC27 /* audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audio.cpp; path = classes/audio.cpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB21C17C7DE000BEC27 /* audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = audio.hpp; path = classes/audio.hpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB31C17C7DE000BEC27 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = classes/main.cpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB41C17C7DE000BEC27 /* note.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = note.cpp; path = classes/note.cpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB51C17C7DE000BEC27 /* note.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = note.hpp; path = classes/note.hpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB61C17C7DE000BEC27 /* noteLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = noteLibrary.cpp; path = classes/noteLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB71C17C7DE000BEC27 /* noteLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = noteLibrary.hpp; path = classes/noteLibrary.hpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB81C17C7DE000BEC27 /* song.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = song.cpp; path = classes/song.cpp; sourceTree = SOURCE_ROOT; };
+		AF3A5BB91C17C7DE000BEC27 /* song.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = song.hpp; path = classes/song.hpp; sourceTree = SOURCE_ROOT; };
+		AF400C981BFFD3F30089D2E2 /* markov-music */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "markov-music"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7BB7AA1C0E730E0051285B /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.a; sourceTree = "<group>"; };
+		AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfftw3.3.dylib; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.3.dylib; sourceTree = "<group>"; };
+		AF7BB7B21C0E745E0051285B /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = ../../../../../../usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.a; sourceTree = "<group>"; };
+		AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsndfile.1.dylib; path = ../../../../../../usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.1.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF400C951BFFD3F30089D2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7BB7B41C0E745E0051285B /* libsndfile.a in Frameworks */,
+				AF7BB7B51C0E745E0051285B /* libsndfile.1.dylib in Frameworks */,
+				AF7BB7AC1C0E730E0051285B /* libfftw3.a in Frameworks */,
+				AF7BB7AD1C0E730E0051285B /* libfftw3.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF400C8F1BFFD3F30089D2E2 = {
+			isa = PBXGroup;
+			children = (
+				AF7BB7B21C0E745E0051285B /* libsndfile.a */,
+				AF7BB7B31C0E745E0051285B /* libsndfile.1.dylib */,
+				AF7BB7AA1C0E730E0051285B /* libfftw3.a */,
+				AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */,
+				AF400C9A1BFFD3F30089D2E2 /* classes */,
+				AFAEC9951C0CF31A00FD702A /* modal - detectionFunctions */,
+				AF400C991BFFD3F30089D2E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF400C991BFFD3F30089D2E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF400C981BFFD3F30089D2E2 /* markov-music */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF400C9A1BFFD3F30089D2E2 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A5BB11C17C7DE000BEC27 /* audio.cpp */,
+				AF3A5BB21C17C7DE000BEC27 /* audio.hpp */,
+				AF3A5BB31C17C7DE000BEC27 /* main.cpp */,
+				AF3A5BB41C17C7DE000BEC27 /* note.cpp */,
+				AF3A5BB51C17C7DE000BEC27 /* note.hpp */,
+				AF3A5BB61C17C7DE000BEC27 /* noteLibrary.cpp */,
+				AF3A5BB71C17C7DE000BEC27 /* noteLibrary.hpp */,
+				AF3A5BB81C17C7DE000BEC27 /* song.cpp */,
+				AF3A5BB91C17C7DE000BEC27 /* song.hpp */,
+			);
+			name = classes;
+			path = "N-Gram Music";
+			sourceTree = "<group>";
+		};
+		AFAEC9951C0CF31A00FD702A /* modal - detectionFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				AF2B97081C17FF1C002891C4 /* detectionfunctions.cpp */,
+				AF2B97091C17FF1C002891C4 /* detectionfunctions.h */,
+				AF2B970A1C17FF1C002891C4 /* exceptions.cpp */,
+				AF2B970B1C17FF1C002891C4 /* exceptions.h */,
+				AF2B970C1C17FF1C002891C4 /* LICENSE */,
+				AF2B970D1C17FF1C002891C4 /* mq.cpp */,
+				AF2B970E1C17FF1C002891C4 /* mq.h */,
+			);
+			name = "modal - detectionFunctions";
+			path = "modal-master";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF400C971BFFD3F30089D2E2 /* N-Gram Music */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */;
+			buildPhases = (
+				AF400C941BFFD3F30089D2E2 /* Sources */,
+				AF400C951BFFD3F30089D2E2 /* Frameworks */,
+				AF400C961BFFD3F30089D2E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "N-Gram Music";
+			productName = "N-Gram Music";
+			productReference = AF400C981BFFD3F30089D2E2 /* markov-music */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF400C901BFFD3F30089D2E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = 6.S083;
+				TargetAttributes = {
+					AF400C971BFFD3F30089D2E2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "markov-music" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AF400C8F1BFFD3F30089D2E2;
+			productRefGroup = AF400C991BFFD3F30089D2E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF400C971BFFD3F30089D2E2 /* N-Gram Music */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF400C941BFFD3F30089D2E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3A5BBE1C17C7DE000BEC27 /* song.cpp in Sources */,
+				AF3A5BBA1C17C7DE000BEC27 /* audio.cpp in Sources */,
+				AF3A5BBC1C17C7DE000BEC27 /* note.cpp in Sources */,
+				AF2B970F1C17FF1C002891C4 /* detectionfunctions.cpp in Sources */,
+				AF3A5BBD1C17C7DE000BEC27 /* noteLibrary.cpp in Sources */,
+				AF2B97111C17FF1C002891C4 /* mq.cpp in Sources */,
+				AF2B97101C17FF1C002891C4 /* exceptions.cpp in Sources */,
+				AF3A5BBB1C17C7DE000BEC27 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF400C9D1BFFD3F30089D2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AF400C9E1BFFD3F30089D2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AF400CA01BFFD3F30089D2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
+				PRODUCT_NAME = "markov-music";
+			};
+			name = Debug;
+		};
+		AF400CA11BFFD3F30089D2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
+				PRODUCT_NAME = "markov-music";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "markov-music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF400C9D1BFFD3F30089D2E2 /* Debug */,
+				AF400C9E1BFFD3F30089D2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF400CA01BFFD3F30089D2E2 /* Debug */,
+				AF400CA11BFFD3F30089D2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF400C901BFFD3F30089D2E2 /* Project object */;
+}
