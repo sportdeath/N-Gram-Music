@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
                BuildableName = "markov-music"
-               BlueprintName = "N-Gram Music"
+               BlueprintName = "markov-music"
                ReferencedContainer = "container:markov-music.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
             BuildableName = "markov-music"
-            BlueprintName = "N-Gram Music"
+            BlueprintName = "markov-music"
             ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,13 +57,13 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
             BuildableName = "markov-music"
-            BlueprintName = "N-Gram Music"
+            BlueprintName = "markov-music"
             ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/testSamples/Glenn Gould - J.S. Bach - Well-Tempered Clavier/CD1/02 - Fugue No. 1 in C Major (BWV 846).wav&quot;"
+            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/markov-music/testSamples/Joe Pass - Stella By Starlight.wav&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
             BuildableName = "markov-music"
-            BlueprintName = "N-Gram Music"
+            BlueprintName = "markov-music"
             ReferencedContainer = "container:markov-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

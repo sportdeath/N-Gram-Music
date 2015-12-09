@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF400C971BFFD3F30089D2E2 /* N-Gram Music */ = {
+		AF400C971BFFD3F30089D2E2 /* markov-music */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */;
+			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "markov-music" */;
 			buildPhases = (
 				AF400C941BFFD3F30089D2E2 /* Sources */,
 				AF400C951BFFD3F30089D2E2 /* Frameworks */,
@@ -140,7 +140,7 @@
 			);
 			dependencies = (
 			);
-			name = "N-Gram Music";
+			name = "markov-music";
 			productName = "N-Gram Music";
 			productReference = AF400C981BFFD3F30089D2E2 /* markov-music */;
 			productType = "com.apple.product-type.tool";
@@ -171,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF400C971BFFD3F30089D2E2 /* N-Gram Music */,
+				AF400C971BFFD3F30089D2E2 /* markov-music */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "N-Gram Music" */ = {
+		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "markov-music" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF400CA01BFFD3F30089D2E2 /* Debug */,

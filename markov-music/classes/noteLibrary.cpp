@@ -64,7 +64,7 @@ void NoteLibrary::addSong(Song * song) {
 
 RealNote * NoteLibrary::chooseRandomNote() {
     
-    Note * note = new EndNote();
+    Note * note;
     
     do {
         auto it = nearbyNotes.begin();
@@ -117,17 +117,23 @@ void NoteLibrary::composeProperty(int order, property p, std::vector<RealNote *>
     
     while (song -> size() < length or length == -1) {
         
-        Note* next = this -> nextNote(&history, p);
+        Note * actualNext = history.back() -> getNextNote();
         
-        if (next -> isEndNote()) {
+        if (actualNext -> isEndNote()) {
             if (length == -1) {
                 return;
             } else {
-                RealNote * newStart = this -> chooseRandomNote();
-                song -> push_back(newStart);
-                history = {newStart};
+                if ((*getProperty(p))[actualNext].size() == 1) {
+                    RealNote * newStart = this -> chooseRandomNote();
+                    song -> push_back(newStart);
+                    history = {newStart};
+                }
             }
-        } else {
+        }
+        
+        Note* next = this -> nextNote(&history, p);
+        
+        if (not (next -> isEndNote())) {
             RealNote * realNext = dynamic_cast<RealNote *>(next);
             song -> push_back(realNext);
             

@@ -16,7 +16,7 @@
 #include "song.hpp"
 
 
-double Note::quinnTau(double in) {
+double RealNote::quinnKappa(double in) {
     double firstTerm = log(3*in*in + 6*in +1)/4.;
     
     double top = in + 1 - sqrt(2/3.);
@@ -26,13 +26,9 @@ double Note::quinnTau(double in) {
     return firstTerm + secondTerm;
 }
 
-double Note::magnitude(int k, fftw_complex * fft) {
-    return sqrt(fft[k][0] * fft[k][0] + fft[k][1] * fft[k][1]);
-}
 
-//Frequency Estimation algorithm described in
-// http://www.statistik.tu-dortmund.de/~bischl/mypapers/frequency_estimation_by_dft_interpolation_a_comparison_of_methods.pdf
-double Note::quinnsSecondEstimator(int k, fftw_complex * fft) {
+
+double RealNote::quinnsSecondEstimator(int k, fftw_complex * fft) {
     double squaredMagnitude = fft[k][0]* fft[k][0] + fft[k][1]* fft[k][1];
     
     double alpha1 = (fft[k - 1][0]*fft[k][0] + fft[k - 1][1]*fft[k][1])/squaredMagnitude; //Re(fft[k-1]/fft[k])
@@ -42,7 +38,7 @@ double Note::quinnsSecondEstimator(int k, fftw_complex * fft) {
     double delta2 = -alpha2/(1 - alpha2);
     
     
-    double delta = (delta1 + delta2)/2. - quinnTau(delta1*delta1) + quinnTau(delta2 * delta2);
+    double delta = (delta1 + delta2)/2. - quinnKappa(delta1*delta1) + quinnKappa(delta2 * delta2);
     
     return delta;
 }
@@ -54,10 +50,6 @@ bool EndNote::isEndNote() {
 
 Note * EndNote::getNextNote() {
     return new EndNote();
-}
-
-double EndNote::compareLengths(Note * that) {
-    return 1;
 }
 
 double EndNote::compareDynamics(Note * that) {
@@ -128,8 +120,8 @@ void RealNote::computeSpectrogram() {
                 double rightPercent = desired - leftNote;
                 double leftPercent = 1 - rightPercent;
                 
-                double rightAmp = rightPercent * magnitude(bin, fftOut);
-                double leftAmp = leftPercent * magnitude(bin, fftOut);
+                double rightAmp = rightPercent * sqrt(fftOut[bin][0] * fftOut[bin][0] + fftOut[bin][1] * fftOut[bin][1]);
+                double leftAmp = leftPercent * sqrt(fftOut[bin][0] * fftOut[bin][0] + fftOut[bin][1] * fftOut[bin][1]);
                 
                 spectrogram[leftNote] += leftAmp;
                 spectrogram[rightNote] += rightAmp;
@@ -177,7 +169,7 @@ RealNote::RealNote(Note * next, Song * song, long startFrame, long endFrame) {
     this -> computePower();
 }
     
-std::array<double, Note::spectrogramSize>& RealNote::getSpectrogram() {
+std::array<double, RealNote::spectrogramSize>& RealNote::getSpectrogram() {
     return spectrogram;
 }
 
@@ -219,18 +211,6 @@ double RealNote::compareDynamics(Note * that) {
     } else {
         return thatPower/thisPower;
     }
-}
-
-double RealNote::compareLengths(Note * that) {
-    if (that -> isEndNote()) {
-        return 1;
-    }
-    
-    RealNote * thatNote;
-    
-    thatNote = dynamic_cast<RealNote *>(that);
-    
-    return (this -> getSampleArray() -> size())/(thatNote -> getSampleArray() -> size());
 }
 
 double RealNote::comparePitchWithoutShift(Note * that) {

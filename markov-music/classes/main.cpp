@@ -13,25 +13,30 @@
 #include <string>
 #include "noteLibrary.hpp"
 
+
 /*
- given random starting note
-
- Takes Sound file inputs and returns its left channel as an array of doubles.
- The array has file.frames() number of samples.
+ Generates a new song using markov chains from a source song.
+ The pitch and dynamics are generated independently and their
+ markov orders can be adjusted. Because some generated songs
+ can be extremely short, 10 are generated and the one with closest to
+ 200 notes is chosen (a 3-6 minute song). If no output directory 
+ is given, the output will be in the same directory as the input 
+ with "-markov" appended to the name.
  */
-
 int main(int argc, char* argv[]) {
     
     std::string songDirectory;
     std::string outputDirectory;
     
     double pitchThreshold = 0.8;
-    double dynamicsThreshold = 0.8;
+    double dynamicsThreshold = 0.7;
     int pitchOrder = 3;
-    int dynamicsOrder = 3;
+    int dynamicsOrder = 4;
     
-    int songsToGenerate = 5;
+    int songsToGenerate = 10;
+    int desiredNoteLength = 200;
     
+    //Parse arguments
     if ( argc == 2 ) {
         songDirectory = argv[1];
         outputDirectory = songDirectory.substr(0, songDirectory.length() - 4) + "-markov.wav";
@@ -55,41 +60,47 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     
-    NoteLibrary * library = new NoteLibrary(pitchThreshold, dynamicsThreshold);
+    //Initialize library
+    NoteLibrary library(pitchThreshold, dynamicsThreshold);
     
-    printf("Adding file \"%s\"\n", songDirectory.c_str());
+    //Add song to Library
+    printf("Analyzing file \"%s\"\n", songDirectory.c_str());
     Song * songFile = new Song(songDirectory);
     if ( songFile -> isInvalid() ) {
         printf("\"%s\" is not a valid wav file.\n", songDirectory.c_str());
         return 0;
     }
-    library -> addSong(songFile);
+    library.addSong(songFile);
     
+    
+    //Generate (songsToGenerate) pitches and choose the longest one.
     printf("Generating songs ...\n");
-    
-    
     std::vector<RealNote *> writePitches;
     
     for (int i = 0; i < songsToGenerate; i++) {
         std::vector<RealNote *> generatedPitches;
-        library -> composeProperty(pitchOrder, NoteLibrary::PITCH, &generatedPitches);
+        library.composeProperty(pitchOrder, NoteLibrary::PITCH, &generatedPitches);
         printf("... with %lu notes\n", generatedPitches.size());
-        if (writePitches.empty() or generatedPitches.size() > writePitches.size()) {
+        if (writePitches.empty() or
+            abs((int) generatedPitches.size() - desiredNoteLength)
+            < abs((int) writePitches.size() - desiredNoteLength)) {
             writePitches = generatedPitches;
         }
     }
     
     printf("Choosing song with %lu notes.\n", writePitches.size());
     
+    //Generate dynamics independently
     printf("Generating dynamics...\n");
     std::vector<RealNote *> dynamics;
-    library -> composeProperty(dynamicsOrder, NoteLibrary::DYNAMICS, &dynamics, writePitches.size());
+    library.composeProperty(dynamicsOrder, NoteLibrary::DYNAMICS, &dynamics, writePitches.size());
     
+    //Write song to file.
     printf("Writing song to \"%s\".\n", outputDirectory.c_str());
     std::map<NoteLibrary::property, std::vector<RealNote *> *> song;
     song[NoteLibrary::PITCH] = &writePitches;
     song[NoteLibrary::DYNAMICS] = &dynamics;
-    library ->writeToFile(&song, outputDirectory.c_str());
+    library.writeToFile(&song, outputDirectory.c_str());
     
     return 0;
 }

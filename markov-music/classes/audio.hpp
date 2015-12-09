@@ -13,18 +13,28 @@
 #include <vector>
 
 class Audio {
+    /* The sample information of each channel */
     std::vector<std::vector<double>> sampleArrays;
+    
+    /* The sample rate */
     int sampleRate;
 public:
+    /* Returns all channels of the song */
     std::vector<std::vector<double>> * getChannels();
+    
+    /* Returns the leftmost channel of the song */
     std::vector<double> * getSampleArray();
+    
+    /* Returns the sample rate of the song */
     int getSampleRate();
     
+    /* Sets the channel samples */
     void setSampleArray(std::vector<std::vector<double>> array);
+    
+    /* Sets the sample rate */
     void setSampleRate(int rate);
     
-    void detectOnsets(std::vector<int> * );
-    static void plotOnsets(std::vector<double> * sampleArray, double * odfValues, std::vector<int> * onsets);
+
 };
 
 #endif /* audio_hpp */
