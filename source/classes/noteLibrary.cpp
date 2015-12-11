@@ -188,13 +188,19 @@ void NoteLibrary::normaliseToPower(std::vector<double> * input, double oldPower,
 
 void NoteLibrary::createOutput(std::map<property, std::vector<RealNote *> * > * song, std::vector<std::vector<double>> * output) {
     
+    if (song -> find(PITCH) == song -> end()) {
+        return;
+    }
+    
     for (int i = 0; i < (*song)[PITCH] -> size(); i++) {
         RealNote * note =(*(*song)[PITCH])[i];
         
         std::vector<std::vector<double>> channels = *note -> getChannels();
 
         for (int chan = 0; chan < channels.size(); chan ++) {
-            //normaliseToPower(&channels[chan], note -> getPower(), (*(*song)[DYNAMICS])[i] -> getPower());
+            if (song -> find(DYNAMICS) != song -> end()) {
+                normaliseToPower(&channels[chan], note -> getPower(), (*(*song)[DYNAMICS])[i] -> getPower());
+            }
             this -> crossFade(0.001 * note -> getSampleRate(), &(*output)[chan], &channels[chan]);
         }
     }

@@ -63,12 +63,24 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "&quot;/Users/tfh/Dropbox (MIT)/allSources/Glenn Gould - J.S. Bach - Goldberg Variations/01 - Glenn Gould - Aria.wav&quot;"
+            argument = "&quot;/Users/tfh/Dropbox (MIT)/iTunes/iTunes Media/Music/Kendrick Lamar/Section.80/12 Rigamortus.wav&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/outputs/debug.wav&quot;"
-            isEnabled = "NO">
+            argument = "&quot;/Users/tfh/Dropbox (MIT)/Goldberg Variations Variations/Rigamortus.wav&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "3"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "2"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

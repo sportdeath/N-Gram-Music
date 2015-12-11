@@ -35,6 +35,7 @@ int main(int argc, char* argv[]) {
     
     int songsToGenerate = 10;
     
+    double desiredMinutes = 2;
     
     //Parse arguments
     if ( argc == 2 ) {
@@ -43,20 +44,23 @@ int main(int argc, char* argv[]) {
     } else if ( argc == 3 ) {
         songDirectory = argv[1];
         outputDirectory = argv[2];
-    } else if ( argc == 4 ) {
+    } else if ( argc == 6 ) {
         songDirectory = argv[1];
         outputDirectory = argv[2];
         pitchOrder = atoi(argv[3]);
         dynamicsOrder = atoi(argv[4]);
-        if ( pitchOrder < 1 or dynamicsOrder < 1 ) {
-            printf("Markov orders must be integers > 0");
+        if ( pitchOrder < 1 ) {
+            printf("Pitch order must be an integer > 0");
             return 0;
         }
+        desiredMinutes = atof(argv[5]);
     } else {
         printf("Use one of the following:\n");
         printf("./markov-music songDirectory\n");
         printf("./markov-music songDirectory outputDirectory\n");
-        printf("./markov-music songDirectory outputDirectory pitchOrder dynamicsOrder\n");
+        printf("./markov-music songDirectory outputDirectory pitchOrder dynamicsOrder desiredTime\n");
+        printf("\n If dynamicsOrder <= 0, dynamics will be disabled.\n");
+        printf("If desiredTime <= 0, the outputted song will be about the same length as the input song.\n");
         return 0;
     }
     
@@ -76,8 +80,9 @@ int main(int argc, char* argv[]) {
     double timeInMinutes = timeInSeconds/60.;
     double notesPerMinute = numNotes/timeInMinutes;
     
-    int desiredMinutes = 2;
-    //double desiredMinutes = timeInMinutes;
+    if (desiredMinutes <= 0) {
+        desiredMinutes = timeInMinutes;
+    }
     
     printf("Detected %li notes\n", numNotes);
     printf("Song is %f minutes long\n", timeInMinutes);
@@ -104,16 +109,21 @@ int main(int argc, char* argv[]) {
     
     printf("Choosing song with %lu notes and %i%% originality.\n", writePitches.size(), (int) (library.originality(&writePitches)*100));
     
-    //Generate dynamics independently
-    printf("Generating dynamics...\n");
+    std::map<NoteLibrary::property, std::vector<RealNote *> *> song;
+    song[NoteLibrary::PITCH] = &writePitches;
+    
     std::vector<RealNote *> dynamics;
-    library.composeProperty(dynamicsOrder, NoteLibrary::DYNAMICS, &dynamics, writePitches.size());
+    
+    if (dynamicsOrder > 0) {
+        //Generate dynamics independently
+        printf("Generating dynamics...\n");
+        library.composeProperty(dynamicsOrder, NoteLibrary::DYNAMICS, &dynamics, writePitches.size());
+        song[NoteLibrary::DYNAMICS] = &dynamics;
+    }
     
     //Write song to file.
     printf("Writing song to \"%s\".\n", outputDirectory.c_str());
-    std::map<NoteLibrary::property, std::vector<RealNote *> *> song;
-    song[NoteLibrary::PITCH] = &writePitches;
-    song[NoteLibrary::DYNAMICS] = &dynamics;
+
     library.writeToFile(&song, outputDirectory.c_str());
     
 }
