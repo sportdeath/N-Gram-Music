@@ -24,10 +24,12 @@ NoteLibrary::NoteLibrary(double pThreshold, double dThreshold) {
     dynamicsThreshold = dThreshold;
 }
     
-int NoteLibrary::addSong(Song * song) {
+long NoteLibrary::addSong(Song * song) {
     std::vector<Note *> newNotes;
     
     song->splitIntoNotes(&newNotes);
+    
+    startNotes.push_back(newNotes[newNotes.size() - 1]);
     
     Note * oldNote;
     
@@ -77,6 +79,19 @@ RealNote * NoteLibrary::chooseRandomNote() {
     return dynamic_cast<RealNote *>(note);
 }
 
+RealNote * NoteLibrary::chooseStartNote() {
+    
+    Note * note;
+    
+    do {
+        auto it = startNotes.begin();
+        std::advance(it, rand() % startNotes.size());
+        note = *it;
+    } while (note -> isEndNote());
+    
+    return dynamic_cast<RealNote *>(note);
+}
+
 Note * NoteLibrary::nextNote(std::deque<RealNote *> * noteHistory, property p) {
     
     std::map<Note *, std::vector<Note *>> * nearby = this -> getProperty(p);
@@ -113,7 +128,7 @@ std::map<Note *, std::vector<Note *>> * NoteLibrary::getProperty(property p) {
 }
 
 void NoteLibrary::composeProperty(int order, property p, std::vector<RealNote *> * song, long length) {
-    RealNote * start = this -> chooseRandomNote();
+    RealNote * start = this -> chooseStartNote();
     (*song) = {start};
     std::deque<RealNote *>  history = {start};
     
@@ -126,7 +141,7 @@ void NoteLibrary::composeProperty(int order, property p, std::vector<RealNote *>
                 return;
             } else {
                 if ((*getProperty(p))[actualNext].size() == 1) {
-                    RealNote * newStart = this -> chooseRandomNote();
+                    RealNote * newStart = this -> chooseStartNote();
                     song -> push_back(newStart);
                     history = {newStart};
                 }
@@ -179,7 +194,7 @@ void NoteLibrary::createOutput(std::map<property, std::vector<RealNote *> * > * 
         std::vector<std::vector<double>> channels = *note -> getChannels();
 
         for (int chan = 0; chan < channels.size(); chan ++) {
-            normaliseToPower(&channels[chan], note -> getPower(), (*(*song)[DYNAMICS])[i] -> getPower());
+            //normaliseToPower(&channels[chan], note -> getPower(), (*(*song)[DYNAMICS])[i] -> getPower());
             this -> crossFade(0.001 * note -> getSampleRate(), &(*output)[chan], &channels[chan]);
         }
     }

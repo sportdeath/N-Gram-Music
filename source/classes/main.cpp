@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     int dynamicsOrder = 4;
     
     int songsToGenerate = 10;
-    int desiredMinutes = 2;
+    
     
     //Parse arguments
     if ( argc == 2 ) {
@@ -70,12 +70,16 @@ int main(int argc, char* argv[]) {
         printf("\"%s\" is not a valid wav file.\n", songDirectory.c_str());
         return 0;
     }
-    int numNotes = library.addSong(songFile);
+    
+    long numNotes = library.addSong(songFile);
     double timeInSeconds = (songFile -> getSampleArray() -> size())/(double) (songFile -> getSampleRate());
     double timeInMinutes = timeInSeconds/60.;
     double notesPerMinute = numNotes/timeInMinutes;
     
-    printf("Detected %i notes\n", numNotes);
+    int desiredMinutes = 2;
+    //double desiredMinutes = timeInMinutes;
+    
+    printf("Detected %li notes\n", numNotes);
     printf("Song is %f minutes long\n", timeInMinutes);
     printf("Song has about %i notes per minute\n", (int) notesPerMinute);
     
@@ -112,6 +116,5 @@ int main(int argc, char* argv[]) {
     song[NoteLibrary::DYNAMICS] = &dynamics;
     library.writeToFile(&song, outputDirectory.c_str());
     
-    return 0;
 }
 

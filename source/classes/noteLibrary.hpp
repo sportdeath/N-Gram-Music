@@ -26,6 +26,7 @@ class NoteLibrary {
      thresholds of NOTE. */
     std::map<Note *, std::vector<Note *>> nearbyNotes;
     std::map<Note *, std::vector<Note *>> nearbyDynamics;
+    std::vector<Note *> startNotes;
 
 public:
     
@@ -40,12 +41,17 @@ public:
      Adds all the notes in a song into the song library.
      Returns number of added notes.
      */
-    int addSong(Song * song);
+    long addSong(Song * song);
     
     /*
      Randomly choses a note. Used to pick the start note
      */
     RealNote * chooseRandomNote();
+
+    /*
+     Randomly choses a start note;
+     */
+    RealNote * chooseStartNote();
     
     /*
      Randomly choses a new note whose predecessors have similar

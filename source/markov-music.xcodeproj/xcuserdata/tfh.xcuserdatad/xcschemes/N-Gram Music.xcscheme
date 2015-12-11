@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/testOutputs/Bach - Goldberg Aria.wav&quot;"
+            argument = "&quot;/Users/tfh/Dropbox (MIT)/allSources/Glenn Gould - J.S. Bach - Goldberg Variations/01 - Glenn Gould - Aria.wav&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
