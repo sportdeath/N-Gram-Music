@@ -49,11 +49,15 @@ Other valid arguments include:
 
 ```
 ./markov-music inputSongFile.wav outputSongFile.wav
-./markov-music inputSongFile.wav outputSongFile.wav pitchOrder dynamicsOrder
+./markov-music inputSongFile.wav outputSongFile.wav pitchOrder dynamicsOrder desiredTime
 ```
 These arguments allow for the user to set a custom output directory, 
 and manually set the markov orders for both pitch and dynamic generation 
-each of which are 2 by default.
+which are 3 and 4 by default. The desiredTime parameter allows the user to set
+the approximate length of the output song in minutes, and is 2 by default.
+
+If the dynamicsOrder is less than or equal to zero dynamics will be disabled (the volume of each note will be exactly the volume in the source).
+If the desiredTime is less than or equal to zero the output song will be approximately the same lenth as the input song. 
 A complete description of the theory behind the code can be found in the
 write-up. 
 
