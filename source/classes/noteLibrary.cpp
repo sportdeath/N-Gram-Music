@@ -18,6 +18,7 @@
 #include "noteLibrary.hpp"
 #include "note.hpp"
 #include "song.hpp"
+#include <stdio.h>
 
 NoteLibrary::NoteLibrary(double pThreshold, double dThreshold) {
     pitchThreshold = pThreshold;
@@ -92,16 +93,16 @@ RealNote * NoteLibrary::chooseStartNote() {
     return dynamic_cast<RealNote *>(note);
 }
 
-Note * NoteLibrary::nextNote(std::deque<RealNote *> * noteHistory, property p) {
+Note * NoteLibrary::nextNote(std::deque<RealNote *> noteHistory, property p) {
     
     std::map<Note *, std::vector<Note *>> * nearby = this -> getProperty(p);
     
-    std::vector<Note *> potentialNotes = (*nearby)[(*noteHistory)[0]];
+    std::vector<Note *> potentialNotes = (*nearby)[noteHistory[0]];
     
-    for (int i = 1; i < noteHistory -> size(); i++) {
+    for (int i = 1; i < noteHistory . size(); i++) {
         std::vector<Note *> newPotentialNotes;
         
-        std::vector<Note *> nextNotes = (*nearby)[(*noteHistory)[i]];
+        std::vector<Note *> nextNotes = (*nearby)[noteHistory[i]];
         
         for (std::vector<Note *>::iterator pNote = potentialNotes.begin(); pNote != potentialNotes.end(); ++pNote) {
             
@@ -132,6 +133,8 @@ void NoteLibrary::composeProperty(int order, property p, std::vector<RealNote *>
     (*song) = {start};
     std::deque<RealNote *>  history = {start};
     
+    std::vector<Note *> nextsad = nearbyNotes[start];
+    
     while (song -> size() < length or length == -1) {
         
         Note * actualNext = history.back() -> getNextNote();
@@ -148,7 +151,7 @@ void NoteLibrary::composeProperty(int order, property p, std::vector<RealNote *>
             }
         }
         
-        Note* next = this -> nextNote(&history, p);
+        Note* next = this -> nextNote(history, p);
         
         if (not (next -> isEndNote())) {
             RealNote * realNext = dynamic_cast<RealNote *>(next);

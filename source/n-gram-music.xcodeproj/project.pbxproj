@@ -50,7 +50,7 @@
 		AF3A5BB71C17C7DE000BEC27 /* noteLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = noteLibrary.hpp; path = classes/noteLibrary.hpp; sourceTree = SOURCE_ROOT; };
 		AF3A5BB81C17C7DE000BEC27 /* song.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = song.cpp; path = classes/song.cpp; sourceTree = SOURCE_ROOT; };
 		AF3A5BB91C17C7DE000BEC27 /* song.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = song.hpp; path = classes/song.hpp; sourceTree = SOURCE_ROOT; };
-		AF400C981BFFD3F30089D2E2 /* markov-music */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "markov-music"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF400C981BFFD3F30089D2E2 /* n-gram-music */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "n-gram-music"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7BB7AA1C0E730E0051285B /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.a; sourceTree = "<group>"; };
 		AF7BB7AB1C0E730E0051285B /* libfftw3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfftw3.3.dylib; path = ../../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.3.dylib; sourceTree = "<group>"; };
 		AF7BB7B21C0E745E0051285B /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = ../../../../../../usr/local/Cellar/libsndfile/1.0.25/lib/libsndfile.a; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		AF400C991BFFD3F30089D2E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF400C981BFFD3F30089D2E2 /* markov-music */,
+				AF400C981BFFD3F30089D2E2 /* n-gram-music */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF400C971BFFD3F30089D2E2 /* markov-music */ = {
+		AF400C971BFFD3F30089D2E2 /* n-gram-music */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "markov-music" */;
+			buildConfigurationList = AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "n-gram-music" */;
 			buildPhases = (
 				AF400C941BFFD3F30089D2E2 /* Sources */,
 				AF400C951BFFD3F30089D2E2 /* Frameworks */,
@@ -140,9 +140,9 @@
 			);
 			dependencies = (
 			);
-			name = "markov-music";
+			name = "n-gram-music";
 			productName = "N-Gram Music";
-			productReference = AF400C981BFFD3F30089D2E2 /* markov-music */;
+			productReference = AF400C981BFFD3F30089D2E2 /* n-gram-music */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "markov-music" */;
+			buildConfigurationList = AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "n-gram-music" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -171,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF400C971BFFD3F30089D2E2 /* markov-music */,
+				AF400C971BFFD3F30089D2E2 /* n-gram-music */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +286,7 @@
 					/usr/local/Cellar/fftw/3.3.4_1/lib,
 					/usr/local/Cellar/libsndfile/1.0.25/lib,
 				);
-				PRODUCT_NAME = "markov-music";
+				PRODUCT_NAME = "n-gram-music";
 			};
 			name = Debug;
 		};
@@ -299,14 +299,14 @@
 					/usr/local/Cellar/fftw/3.3.4_1/lib,
 					/usr/local/Cellar/libsndfile/1.0.25/lib,
 				);
-				PRODUCT_NAME = "markov-music";
+				PRODUCT_NAME = "n-gram-music";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "markov-music" */ = {
+		AF400C931BFFD3F30089D2E2 /* Build configuration list for PBXProject "n-gram-music" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF400C9D1BFFD3F30089D2E2 /* Debug */,
@@ -315,7 +315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "markov-music" */ = {
+		AF400C9F1BFFD3F30089D2E2 /* Build configuration list for PBXNativeTarget "n-gram-music" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF400CA01BFFD3F30089D2E2 /* Debug */,

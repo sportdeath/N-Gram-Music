@@ -57,7 +57,7 @@ public:
      Randomly choses a new note whose predecessors have similar
      properties to those in noteHistory.
      */
-    Note * nextNote(std::deque<RealNote *> * noteHistory, property p);
+    Note * nextNote(std::deque<RealNote *> noteHistory, property p);
     
     
     /* 

@@ -75,7 +75,7 @@ void Song::detectOnsets(std::vector<int> * onsets) {
     }
     
     //uncomment to create plot
-    //plotOnsets(&sampleArray, odfValues, onsets);
+    //plotOnsets(sampleArray, odfValues, onsets);
     
     return;
     
@@ -86,13 +86,13 @@ void Song::plotOnsets(std::vector<double> * sampleArray, double * odfValues, std
     int hopSize = 512;
     
     FILE * audioFile;
-    audioFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/N-Gram Music/audio","w");
+    audioFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/audio","w");
     
     FILE * transFile;
-    transFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/N-Gram Music/transients","w");
+    transFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/transients","w");
     
     FILE * onsetFile;
-    onsetFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/N-Gram Music/N-Gram Music/onsets","w");
+    onsetFile = fopen ("/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/onsets","w");
     
     for (int n=0 ; n< sampleArray -> size()/hopSize; n++) {
         fprintf (audioFile, "%i\t%f\n", n, (*sampleArray)[hopSize * n]);

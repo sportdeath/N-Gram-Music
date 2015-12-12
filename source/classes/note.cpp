@@ -204,6 +204,14 @@ double RealNote::compareDynamics(Note * that) {
     
     thatNote = dynamic_cast<RealNote *>(that);
     
+    if (this -> getPower() == 0) {
+        if (thatNote -> getPower() == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    
     double thisPower = this -> getPower();
     double thatPower = thatNote -> getPower();
     if (thisPower < thatPower) {
@@ -222,6 +230,14 @@ double RealNote::comparePitchWithoutShift(Note * that) {
     RealNote * thatNote;
     
     thatNote = dynamic_cast<RealNote *>(that);
+    
+    if (this -> getPower() == 0) {
+        if (thatNote -> getPower() == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
     
     std::array<double, spectrogramSize> thatSpectrogram = thatNote->getSpectrogram();
     

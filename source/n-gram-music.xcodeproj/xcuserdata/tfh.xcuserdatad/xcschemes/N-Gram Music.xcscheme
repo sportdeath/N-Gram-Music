@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-               BuildableName = "markov-music"
-               BlueprintName = "markov-music"
-               ReferencedContainer = "container:markov-music.xcodeproj">
+               BuildableName = "n-gram-music"
+               BlueprintName = "n-gram-music"
+               ReferencedContainer = "container:n-gram-music.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "markov-music"
-            BlueprintName = "markov-music"
-            ReferencedContainer = "container:markov-music.xcodeproj">
+            BuildableName = "n-gram-music"
+            BlueprintName = "n-gram-music"
+            ReferencedContainer = "container:n-gram-music.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,31 +56,31 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "markov-music"
-            BlueprintName = "markov-music"
-            ReferencedContainer = "container:markov-music.xcodeproj">
+            BuildableName = "n-gram-music"
+            BlueprintName = "n-gram-music"
+            ReferencedContainer = "container:n-gram-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "&quot;/Users/tfh/Dropbox (MIT)/iTunes/iTunes Media/Music/Kendrick Lamar/Section.80/12 Rigamortus.wav&quot;"
+            argument = "&quot;/Users/tfh/Dropbox (Personal)/6.S083/FinalProject/testSamples/Erik Satie - Gymnope&#x301;die No.1.wav&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&quot;/Users/tfh/Dropbox (MIT)/Goldberg Variations Variations/Rigamortus.wav&quot;"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "3"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-1"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "2"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF400C971BFFD3F30089D2E2"
-            BuildableName = "markov-music"
-            BlueprintName = "markov-music"
-            ReferencedContainer = "container:markov-music.xcodeproj">
+            BuildableName = "n-gram-music"
+            BlueprintName = "n-gram-music"
+            ReferencedContainer = "container:n-gram-music.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

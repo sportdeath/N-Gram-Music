@@ -15,13 +15,13 @@
 
 
 /*
- Generates a new song using markov chains from a source song.
+ Generates a new song using n-gram models from a source song.
  The pitch and dynamics are generated independently and their
- markov orders can be adjusted. Because some generated songs
+ N-gram orders can be adjusted. Because some generated songs
  can be extremely short, 10 are generated and the one with closest to
  2 minutes of material is chosen. If no output directory
  is given, the output will be in the same directory as the input 
- with "-markov" appended to the name.
+ with "-n-gram" appended to the name.
  */
 int main(int argc, char* argv[]) {
     
@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
     //Parse arguments
     if ( argc == 2 ) {
         songDirectory = argv[1];
-        outputDirectory = songDirectory.substr(0, songDirectory.length() - 4) + "-markov.wav";
+        outputDirectory = songDirectory.substr(0, songDirectory.length() - 4) + "-n-gram.wav";
     } else if ( argc == 3 ) {
         songDirectory = argv[1];
         outputDirectory = argv[2];
@@ -56,9 +56,9 @@ int main(int argc, char* argv[]) {
         desiredMinutes = atof(argv[5]);
     } else {
         printf("Use one of the following:\n");
-        printf("./markov-music songDirectory\n");
-        printf("./markov-music songDirectory outputDirectory\n");
-        printf("./markov-music songDirectory outputDirectory pitchOrder dynamicsOrder desiredTime\n");
+        printf("./n-gram-music songDirectory\n");
+        printf("./n-gram-music songDirectory outputDirectory\n");
+        printf("./n-gram-music songDirectory outputDirectory pitchOrder dynamicsOrder desiredTime\n");
         printf("\n If dynamicsOrder <= 0, dynamics will be disabled.\n");
         printf("If desiredTime <= 0, the outputted song will be about the same length as the input song.\n");
         return 0;
