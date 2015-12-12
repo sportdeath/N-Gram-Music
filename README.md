@@ -23,8 +23,7 @@ On OSX, both can be installed though
 with the following commands:
 
 ```
-$ brew install fftw
-$ brew install libsndfile
+$ brew install fftw libsndfile
 ```
 
 This code is built to include the Complex Onset Detection Function from John Glover's library 
