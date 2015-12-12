@@ -27,8 +27,8 @@ $ brew install fftw
 $ brew install libsndfile
 ```
 
-The also is built to include the Complex Onset Detection Function from John Glover's library 
-[Modal](https://github.com/johnglover/modal).
+This code is built to include the Complex Onset Detection Function from John Glover's library 
+[MODAL](https://github.com/johnglover/modal).
 
 ##Usage
 
@@ -61,6 +61,14 @@ If the desiredTime is less than or equal to zero the output song will be approxi
 A complete description of the theory behind the code can be found in the
 write-up. 
 
+##Examples
+
+Some of the "music" I made with this code can be found at
+[Soundcloud](https://soundcloud.com/user-12541400/).
+This program was used to make a variation of each of Bach's
+[Goldberg Variations](https://soundcloud.com/user-12541400/sets/goldberg-variations-variations), 
+as well as some nice
+[impressionist music](https://soundcloud.com/user-12541400/gymnopedie-no1).
 
 ##License
 
