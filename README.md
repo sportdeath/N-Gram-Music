@@ -11,7 +11,7 @@ last N notes in the generated song. The N-gram order N for the pitch is 2 by def
 Dynamics are then generated independently of
 pitch in order to minizimize sharp uncharachteristic jumps in volume between notes.
 
-##Dependencies
+## Dependencies
 
 This code requires the 
 [FFTW](http://www.fftw.org/)
@@ -29,7 +29,7 @@ $ brew install fftw libsndfile
 This code is built to include the Complex Onset Detection Function from John Glover's library 
 [MODAL](https://github.com/johnglover/modal).
 
-##Usage
+## Usage
 
 The most simple usage of this code is:
 
@@ -60,7 +60,7 @@ If the desiredTime is less than or equal to zero the output song will be approxi
 A complete description of the theory behind the code can be found in the
 write-up. 
 
-##Examples
+## Examples
 
 Some of the "music" I made with this code can be found at
 [Soundcloud](https://soundcloud.com/user-12541400/).
@@ -68,28 +68,3 @@ This program was used to make a variation of each of Bach's
 [Goldberg Variations](https://soundcloud.com/user-12541400/sets/goldberg-variations-variations), 
 as well as some nice
 [impressionist music](https://soundcloud.com/user-12541400/gymnopedie-no1).
-
-##License
-
-The MIT License (MIT)
-
-Copyright (c) 2015 Trevor Henderson
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
